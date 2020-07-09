@@ -8,25 +8,24 @@
  * @format
  */
 
-import React from 'react';
+import React from 'react'
 import {
   SafeAreaView,
-  StyleSheet,
   ScrollView,
-  View,
-  Text,
   StatusBar,
-} from 'react-native';
-
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native'
 import {
-  Header,
-  LearnMoreLinks,
   Colors,
   DebugInstructions,
+  Header,
+  LearnMoreLinks,
   ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+} from 'react-native/Libraries/NewAppScreen'
 
-declare const global: {HermesInternal: null | {}};
+declare const global: { HermesInternal: null | {} }
 
 const App = () => {
   return (
@@ -73,8 +72,8 @@ const App = () => {
         </ScrollView>
       </SafeAreaView>
     </>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -113,6 +112,6 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
-});
+})
 
-export default App;
+export default App
