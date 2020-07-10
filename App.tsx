@@ -10,13 +10,19 @@
 
 import React from 'react'
 import { StatusBar } from 'react-native'
+import { Provider } from 'react-redux'
 import Navigator from './Navigation/Navigator'
+import { configureStore } from './store'
+
+const store = configureStore()
 
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <Navigator />
+      <Provider store={store}>
+        <StatusBar barStyle="dark-content" />
+        <Navigator />
+      </Provider>
     </>
   )
 }
