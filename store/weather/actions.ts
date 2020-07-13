@@ -21,9 +21,13 @@ const fetchedWeather: ActionCreator<FetchedWeather> = (weather: Weather) => ({
 
 interface FetchWeatherError extends Action {
   type: 'FetchWeatherError'
+  error: string
 }
-const fetchWeatherError: ActionCreator<FetchWeatherError> = () => ({
+const fetchWeatherError: ActionCreator<FetchWeatherError> = (
+  error: string,
+) => ({
   type: 'FetchWeatherError',
+  error: error,
 })
 
 export type FetchWeatherActions =
@@ -69,6 +73,6 @@ export const fetchWeather: ActionCreator<ThunkAction<
       }
       return dispatch(fetchedWeather(weather))
     },
-    onFailure: () => dispatch(fetchWeatherError()),
+    onFailure: () => dispatch(fetchWeatherError('Shit went bad')),
   })
 }

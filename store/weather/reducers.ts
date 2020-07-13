@@ -19,7 +19,7 @@ export const weatherReducer: Reducer<WeatherState, FetchWeatherActions> = (
         data: action.weather,
       }
     case 'FetchWeatherError':
-      return { ...state, loading: false, error: 'Shit went bad' }
+      return { ...state, loading: false, error: action.error }
     default:
       return state
   }
